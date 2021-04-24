@@ -1,6 +1,5 @@
 import './styles.css'
 
-import { OptionalSearchTypeA, OptionalSearchTypeB, SearchStateType } from 'components/general/Search'
 import { SearchA } from 'components/specific/SearchA'
 import { SearchB } from 'components/specific/SearchB'
 import React, { useState } from 'react'
@@ -18,6 +17,7 @@ export const App = () => {
   const [B_searchStateWithOptional, setB_searchStateWithOptional] = useState(B_initSearchStateWithOptional)
   const [B_searchStateWithoutOptional, setB_searchStateWithoutOptional] = useState(B_initSearchStateWithoutOptional)
 
+  // typescript tells me that onChange has a type mismatch, but I know that it will return the type I expect
   return (
     <div className="App">
       <SearchA
